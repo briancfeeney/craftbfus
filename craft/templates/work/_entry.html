@@ -1,0 +1,45 @@
+{#
+ # Work entry template
+ # -------------------
+ #}
+
+{% extends "_layout" %}
+
+{% block content %}
+
+<style>
+</style>
+
+<div class="workFlex">
+
+	<div class="workTop topBar">
+
+		<!--
+		<h4>{% if entry.type == 'webDesign' %}<a href="/work">Web Design</a>{% endif %}</h4>
+		<h4>{% if entry.type == 'printDesign' %}<a href="/work">Print Design</a>{% endif %}</h4>
+		-->
+	
+		<!-- <h4><a href="/work">{{ entry.postDate.format('F Y') }}</a></h4> -->
+		<h1>{{ entry.title }}</h1>
+		
+	</div>
+	<div class="workBody">
+		{{ entry.body }}
+		
+			{% if entry.portfolioImages|length %}
+				{% for image in entry.portfolioImages %}
+					<img src="{{ image.getUrl() }}">
+				{% endfor %}
+			{% endif %}
+		
+		<p class="postDate">{{ entry.postDate.format('F Y') }}</p>
+		
+		{% if entry.websiteLink %}
+			<a href="{{ entry.websiteLink }}" class="btn" style="background: #{{ entry.color }};">Visit the Site</a>
+		{% endif %}
+			
+	</div>
+	
+</div>
+		
+{% endblock %}

@@ -1,0 +1,45 @@
+{#
+ # Archive template
+ # ---------------
+ #}
+
+{% extends "_layout" %}
+
+{% block content %}
+
+<div class="archive">
+		
+		<h4>Archive</h4>
+
+	{% set allEntries = craft.entries.section('writing,work,photos,reading').limit(null) %}
+	{% for date, entries in allEntries | group("postDate|date('Y')") %}
+	    <h5>{{ date }}</h5>
+	    <ul>
+	        {% for entry in entries %}
+	            <a href="{{ entry.url() }}">
+					<li class="{{ entry.section }}">
+						{% if entry.section == 'Writing' %}
+							<div data-icon="x" class="icon"></div>
+						{% endif %}
+						{% if entry.section == 'Photos' %}
+							<div data-icon="t" class="icon"></div>
+						{% endif %}
+						{% if entry.section == 'Work' %}
+							<div data-icon="b" class="icon"></div>
+						{% endif %}
+						{% if entry.section == 'Reading' %}
+							<div data-icon="z" class="icon"></div>
+						{% endif %}
+						<div class="archive-info">
+							<h6>{{ entry.type.name }}</h6>
+							<h1>{{ entry.title }} <small>{{ entry.postDate.format('n/d') }}</small></h1>
+						</div>
+					</li>
+				</a>
+	        {% endfor %}
+	    </ul>
+	{% endfor %}
+
+</div>
+
+{% endblock %}

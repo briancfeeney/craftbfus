@@ -1,0 +1,37 @@
+{#
+ # Photos index template
+ # -------------------
+ #}
+
+{% extends "_layout" %}
+{% set title = "Reading" %}
+
+{% block content %}
+	
+	<div class="container">
+		
+		{% for entry in craft.entries.section('reading').find() %}
+		<article>
+			
+			<section class="left">
+				{% for image in entry.bookCover %}
+					<img src="{{ image.getUrl() }}">
+				{% endfor %}
+			</section>
+
+			<section class="right">
+				<h1>{{ entry.title }}</h1>
+				<h5>{{ entry.readingAuthor }}</h5>
+				{% if entry.body %}
+				<div class="body">
+					{{ entry.body.page(1) }}
+				</div>
+				{% endif %}
+			</section>
+		</article>
+		{% endfor %}
+
+	</div>
+
+
+{% endblock %}

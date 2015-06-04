@@ -1,0 +1,48 @@
+{#
+ # Reading entry template
+ # -------------------
+ #}
+
+{% extends "_layout" %}
+{% set title = "Reading" %}
+
+{% block content %}
+
+<div class="main">
+	<h4 id="page-title"><a href="/reading">Reading</a></h4>
+	
+	<h1>{{ entry.title }}</h1>
+	<article>
+		
+		<section class="left">
+			<h5>{{ entry.readingAuthor }}</h5>
+			{% for image in entry.bookCover %}
+				<img src="{{ image.getUrl() }}">
+			{% endfor %}
+		</section>
+		
+		<section class="right">
+			{% if entry.body %}
+			<div class="body">
+				{{ entry.body }}
+			</div>
+			{% endif %}
+			{% if entry.readingQuotes | length %}
+				<aside>
+					<h5>Quotations</h5>
+				</aside>
+				{% for quote in entry.readingQuotes %}
+					<aside>
+						<blockquote>
+							{{ quote.readingQuotation }}
+						</blockquote>
+						<h6>p. {{ quote.readingPage }}</h6>
+					</aside>
+				{% endfor %}
+			{% endif %}
+		</section>
+		
+	</article>
+</div>
+
+{% endblock %}

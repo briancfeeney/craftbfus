@@ -1,0 +1,45 @@
+{#
+ # Playground index template
+ # -------------------
+ #}
+
+{% extends "_layout" %}
+{% set title = "Playground" %}
+
+{% block content %}
+
+<div class="playFlex">
+
+	<div id="playgroundTitle">
+		<h2>Playground</h2>
+	</div>
+	
+	<section id="main">
+		{% paginate craft.entries.section('playground').limit(16) as entries %}
+		{% for entry in entries %}
+			<article>
+			{% for image in entry.playgroundImages %}
+				{% if entry.playgroundImages|length > 1 %}
+					<a href="{{ entry.url() }}" class="images"><img src="{{ image.getUrl() }}"></a>
+				{% else %}
+					<a href="{{ entry.url() }}"><img src="{{ image.getUrl() }}"></a>
+				{% endif %}
+			{% endfor %}
+			</article>
+		{% endfor %}
+		
+		<div class="playgroundNav">
+		    {% if paginate.nextUrl %}
+		        <a href="{{ paginate.nextUrl }}" class="paging prev">Older</a>
+		    {% endif %}
+			{% if paginate.prevUrl %}
+		        <a href="{{ paginate.prevUrl }}" class="paging next">Newer</a>
+		    {% endif %}
+
+			{% endpaginate %}
+		</div>
+	</section>
+	
+</div>
+
+{% endblock %}
