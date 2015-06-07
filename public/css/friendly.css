@@ -3678,7 +3678,7 @@ fieldset[disabled] .navbar-inverse .btn-link:focus {
   padding: 5em 0;
 }
 #brooklynmuseum section.full-width {
-  background: #ffffff;
+  /* background: #fff; */
   padding: 3em;
   margin: 2em 0;
 }
@@ -3765,6 +3765,9 @@ fieldset[disabled] .navbar-inverse .btn-link:focus {
     margin: 0 auto;
   }
 }
+#brooklynmuseum #main.bkmStory img {
+  margin-bottom: 2em;
+}
 #brooklynmuseum .note-icon {
   color: #00aeef;
 }
@@ -3832,6 +3835,68 @@ fieldset[disabled] .navbar-inverse .btn-link:focus {
 }
 #brooklynmuseum #dashboard-wireframes .item {
   min-height: 22em;
+}
+#brooklynmuseum .screenshots img {
+  box-shadow: 5px 5px 10px #999;
+}
+#posts header {
+  background-color: transparent;
+}
+#posts header a {
+  color: #f6f5ec !important;
+}
+#posts header a:hover {
+  color: #fcb062 !important;
+}
+#posts .postsHeader {
+  background-color: #242a2c;
+  padding: 2em 0;
+  margin-bottom: 5em;
+  text-align: center;
+  background-size: cover;
+  background-position: center;
+  height: 40em;
+  margin-top: -4em;
+}
+#posts .postsHeader img {
+  width: 90%;
+  margin-top: 13em;
+}
+#posts section {
+  overflow: hidden;
+  padding: 5em 0;
+}
+#posts section.full-width {
+  /* background: #fff; */
+  padding: 3em;
+  margin: 2em 0;
+}
+#posts h2 {
+  font-size: 2.5em;
+}
+#posts h3 {
+  text-transform: uppercase;
+  font-weight: 600;
+  font-size: 1.5em;
+  margin-top: 2em;
+}
+#posts ul {
+  font-size: 1.2em;
+}
+#posts #main {
+  min-height: 0;
+  margin: 0;
+}
+#posts #main.postsStory {
+  width: 100%;
+  margin: 0 auto 10em;
+  overflow: hidden;
+}
+#posts #main.postsStory img {
+  margin-bottom: 2em;
+}
+#posts .screenshots {
+  box-shadow: 5px 5px 10px #ddd;
 }
 /* -------------------------------------------------------------------------------- */
 html {

@@ -1,0 +1,236 @@
+{#
+ # Homepage template
+ # ---------------
+ #
+ # When this template gets loaded, it will be because someone has accessed
+ # http://yoursite.com/ (without any URI). Craft checks to see if you have
+ # a Single section set to be the Homepage (as you do, by default), and
+ # loads the section’s Template (this file). A special ‘entry’ variable
+ # will already be set for you, assigned to the Homepage entry.
+ #
+ # It's worth noting that even if you didn't have a Homepage Single section,
+ # as long as this template remains at craft/templates/index.html, it
+ # would still be the one to get loaded when accessing http://yoursite.com/,
+ # albeit without an ‘entry’ variable already set for you.
+ #
+ # See this page for more details on how Craft routes requests:
+ # http://buildwithcraft.com/docs/routing
+ #}
+
+{% extends "_layout" %}
+
+{% block content %}
+	
+	</div>
+	<div class="bkmHeader">
+		<img src="./public/images/BKM/bkm-logo-white.png" id="BKMlogo">
+	</div>
+		
+	<div id="main" class="bkmStory">
+		<div class="container">
+			<div class="row">
+				<div class="col-sm-9">
+					<h1>Brooklyn Museum</h1>
+				</div>
+			</div>
+			<div class="row">
+				<div class="col-sm-9">
+					<p>On January 2nd, 2014, I began as Web Designer for the Brooklyn Museum, working on a host of separate projects tightly integrated under a Bloomberg Connects funding umbrella. My role, in each, has been to direct the design process, collaborate in creating features and functions, and to handle all the UI and UX responsibilities, occasionally doing some front-end work.</p>
+				</div>
+				<div class="col-sm-3">
+					<button class="story-toggle">View the Work</button>
+				</div>
+			</div>
+			<div class="row">
+				<div class="col-sm-9">
+					<p>The Bloomberg Connects project, currently branded as ASK, has a hazy three year roadmap. We are somewhere near the end of the first year, but due to outside circumstances — including but not limited to the retirement of our Museum Director — many projects have been pushed forward on the timeline.</p>
+					<p>Our process is iterative, and right now we are shipping MVP level work. Because we’re designing and building the first versions of everything at once, it has been important for me to put a structure in place which allows for a looseness to the designs, yet sturdy enough for the developers to build out new elements on their own. I’m stretched thin, so giving the developers room to operate independently has been a priority, and, I’m happy to report, successful.</p>
+					<p>The full scope of the Bloomberg Connects project has been intentionally left open, but there are a handful of elements we have always known will be included: a new iOS app, a web application to work in tandem with the iOS app, new digital signage for the lobby and galleries, a CMS migration and refresh of the current website, and then a full website redesign planned for 2017. The second, more involved website redesign will deeply integrate the data and experience we will have gathered with the ASK program.</p>
+					<p>Everything we're building evolves around the project mission statement:</p>
+				</div>
+			</div>
+		</div>
+
+			<blockquote>To create a dynamic and responsive museum that fosters dialogue and sparks conversation between staff and all Museum visitors.</blockquote>
+
+		<div class="container">
+			<div class="row">
+				<div class="col-sm-9">	
+					<p>What we build and how we build it is an ongoing discussion. The one thing that doesn't change is our commitment to the Museum visitor.</p>
+					
+					<h2>ASK Branding</h2>
+					<p>The Brooklyn Museum branding — and original website design — was completed by 2x4 Studios in 2004. The scope of this project does not include rebranding the museum, but does include branding the wide-reaching Bloomberg Connects project alongside it. We wanted something approachable and friendly, yet solid enough for a storied institution. I attempted to stretch the Museum branding as far as it could go for ASK, but I soon became entangled with two problems: color and typography.</p>
+					<h3>ASK Color</h3>
+				</div>
+			</div>
+			<div class="row">
+				<div class="col-sm-9">
+					<p>The color palette chosen by 2x4 for our print materials, while bright and eye-catching on physical printings, does not translate well to digital use, and especially not for user interface design. Each color had been chosen to work on its own (paired with white), but when placed together in a single view, they clashed and worked against each other. A new color palette was necessary. I created a new palette based on our official brand color — process cyan — with user interface design in mind. This new palette is being used for all the components of the Ask project. It acts as an extension of the old branding, working well alongside cyan, black, and white.</p>
+				</div>
+				<div class="col-sm-3">
+					<p class="sidenote">Black, white, and cyan still remain the basis for design aspects unrelated to Ask, including many parts of the iOS app.</p>
+				</div>
+			</div>
+		</div>
+
+		<section class="full-width">
+			<div class="col-sm-2 bkm-color">
+				<h4>Print Pallete</h4>
+				<div class="col-xs-6 pallete"></div>
+				<div class="col-xs-6 pallete"></div>
+				<div class="col-xs-6 pallete"></div>
+				<div class="col-xs-6 pallete"></div>
+				<div class="col-xs-6 pallete"></div>
+				<div class="col-xs-6 pallete"></div>
+				<div class="col-xs-6 pallete"></div>
+				<div class="col-xs-6 pallete"></div>
+			</div>
+			<div class="col-sm-10 ask-color">
+				<h4>ASK Pallete</h4>
+				<div class="col-xs-3 pallete"></div>
+				<div class="col-xs-3 pallete"></div>
+				<div class="col-xs-3 pallete"></div>
+				<div class="col-xs-3 pallete"></div>
+				<div class="col-xs-3 pallete"></div>
+				<div class="col-xs-3 pallete"></div>
+				<div class="col-xs-3 pallete"></div>
+				<div class="col-xs-3 pallete"></div>
+			</div>
+		</section>
+
+		<div class="container">
+			<div class="row">
+				<div class="col-sm-9">
+					<h3>Ask Typography</h3>
+					<p>Typography is a story that is still in progress. The museum has a custom typeface called Brooklynesque, based on Helvetica Grotesk, which was drawn for us by 2x4. The typeface itself looks great, but the fonts, being over ten years old and not originally created for use on screens, break down when rasterized in browsers. Many letters look weak or fuzzy, especially at small sizes, and the kerning is suspect. There are only three weights of the typeface — regular, bold, and light — each with accompanying italics. Our UI is complicated enough that more weights would be very useful, as would having small caps or condensed drawings. My plan is to have the Brooklynesque font updated for modern use, and the gears are moving on that. In the meantime, the practical (and political) compromise is to use Helvetica Neue for all digital projects.</p>
+
+					<h3>ASK Logo</h3>
+					<p>In the beginning, the project was referred to internally as the VEI (Visitors Experience Initiative). An early brainstorm led us to “Hello”, which we used tentatively for months and appears on early wireframes and comps. It never stuck, though, so we talked it out again. We wanted a name that was more active, that operated more like a call to action, something like a previous Museum project, “Go”. Another brainstorm brought us to “Ask”, which stuck. It sounded friendly to our ears, as well as direct and personal. Ask Brooklyn Museum.</p>
+					<p>I discovered early on that we should use script lettering for the wordmark. In all the early wireframes and concept designs, the word “Hello” consistently looked flat, undistinguished. So did Ask. Too many hard vertical lines, I think. The solution was to use a script, preferably hand-drawn. Though I expected we’d hire a freelancing letterer for this, it ended up falling to me. The team liked my handwriting, they said. Really, they said. So I spent a couple days drawing “ask” over and over. I picked one particularly good looking attempt out of the hundreds, opened it in illustrator, and prodded it into a logo-worthy shape. As of today, my hand-drawn wordmark remains as the official logo.</p>
+				</div>
+			</div>
+		</div>
+
+		<section class="full-width">
+			<div class="container">
+				<div class="row">
+					<div class="col-sm-8">
+						<img src="http://brianfeeney.us/public/brooklynmuseum/ask-logo-black.png" class="ask-logo">
+					</div>
+				</div>
+			</div>
+		</section>
+		
+		<div class="container">
+			<div class="row">
+				<div class="col-sm-9">
+
+					<h2>ASK Dashboard</h2>
+					<p>The dashboard is a large web application built for internal use only, with a wide range of administrative functions. It’s most important function is acting as one half of the ASK communication channel, which our staff will use for chatting with our visitors as they wander the galleries using the iOS app. As the most important MVP piece of ASK, the chat view is where we started with design and development. The rest of the dashboard mainly involves admin resources and data management, but more fun than that sounds.</p>
+
+					<h3>Chat View Wireframes</h3>
+					<p>At first, our list of features for the chat view were pure speculation. We knew that once the app was built and working, we’d quickly discover what worked, what didn’t, what was MVP worthy, and what should be shelved for future versions.</p>
+				</div>
+			</div>
+		</div>
+
+		<section class="full-width" id="dashboard-wireframes">
+			<div class="row">
+				<div class="col-md-3 item">
+					<img src="http://brianfeeney.us/public/brooklynmuseum/Dashboard-Wireframe-1.png">
+				</div>
+				<div class="col-md-3 item">
+					<img src="http://brianfeeney.us/public/brooklynmuseum/Dashboard-Wireframe-2.png">
+				</div>
+				<div class="col-md-3 item">
+					<img src="http://brianfeeney.us/public/brooklynmuseum/Dashboard-Wireframe-3.png">
+				</div>
+				<div class="col-md-3 item">
+					<img src="http://brianfeeney.us/public/brooklynmuseum/Dashboard-Wireframe-4.png">
+				</div>
+				<div class="col-md-3 item">
+					<img src="http://brianfeeney.us/public/brooklynmuseum/Dashboard-Wireframe-5.png">
+				</div>
+				<div class="col-md-3 item">
+					<img src="http://brianfeeney.us/public/brooklynmuseum/Dashboard-Wireframe-6.png">
+				</div>
+				<div class="col-md-3 item">
+					<img src="http://brianfeeney.us/public/brooklynmuseum/Dashboard-Wireframe-7.png">
+				</div>
+			</div>
+		</section>
+		
+		<div class="container">
+			<div class="row">
+				<div class="col-sm-9">
+					<h3>Chat View Designs</h3>
+					<p>With the first designs, I worked down two separate paths: a dark theme, and a light theme. We were still operating on an imagined feature-complete concept, assuming what the Dashboard might look like towards the end of development.</p>
+					<p>These two comps are where those paths lead.</p>
+				</div>
+			</div>
+		</div>
+
+		<section class="full-width">
+			<div class="row">
+				<div class="col-sm-6">
+					<img src="http://brianfeeney.us/public/brooklynmuseum/Dashboard-Comp-1-Dark.png">
+				</div>
+				<div class="col-sm-6">
+					<img src="http://brianfeeney.us/public/brooklynmuseum/Dashboard-Comp-2-Light.png">
+				</div>
+			</div>
+		</section>
+		
+		<div class="container">
+			<div class="row">
+				<div class="col-sm-9">
+					<p>I suspected the light theme would be the clear choice, but after comparing the two closely, I found it had two big flaws as a user interface.
+						<ul>
+							<li>It's very bright. The Audience Engagement Team would be viewing these on a large screen in shadowy museum lobby, and the extra brightness could cause eye-strain after many hours. They would often be looking up from the screen in order to speak with visitors, which means almost constant light—level adjustment.</li>
+							<li>Lack of clear hierarchy. The chat column, the most important element, gets lost in all the white. It’s not clear enough which UI elements are interactive text fields, and which aren’t. Also true for buttons and links.</li>
+						</ul>
+					<p>
+
+					<h3>Dashboard MVP Development</h3>
+					<p>The dark theme was approved and we moved into the development phase. First on the agenda was deciding which elements of the Dashboard were necessary for the beta, and which could be shelved for further releases or scrapped altogether. We pulled out a ton of functionality and I defined a primary and secondary focus for the dashboard. Primary: facilitating chats between Experts and Visitors. Secondary: presenting Hosts with relevant information to better inform the visitors.</p>
+				</div>
+			</div>
+		</div>
+
+		<section class="full-width">
+			<div class="row">
+				<div class="col-sm-10 col-sm-offset-1">
+					<img src="http://brianfeeney.us/public/brooklynmuseum/Dashboard-Comps-dev-1.png">
+				</div>
+			</div>
+		</section>
+		
+		<div class="container">
+			<div class="row">
+				<div class="col-sm-9">
+
+					<h3>More Views!</h3>
+					<p>And then there was the rest of the app. A ton more wireframing. More designing. For the MVP, development decided we should use tables for most of the presentation. It’s the fastest way for them to display data, and also convenient for adding new data types we haven’t yet conceived of. Once we know more about how our ASK staff will be using all this data, we will redesign these screens to better suit that usage. As of now, we have no idea what will become most important and what will prove to be useless. We’re trying to assume as little as possible, and relying on research.</p>
+
+					<h2>iOS Design</h2>
+					<p>Our ASK MVP was iMessage. It worked brilliantly. For the first round of user testing, we gave visitors iTouches to carry around and ask questions, and our currators used iPads to respond. So when it came time to design the first version of the ASK app, we hewed closely to the mental model of iMessage. I suspect that after a year or so of actual use, we’ll have a better idea of what the app does best and how visitors really want to use it. At that point, we’ll redesign the app to better accommodate it’s true purpose. What we’re building is totally new within a Museum environment, and so we are being very careful with our expectations and assumptions.</p>
+
+					<h2>Touchscreens and Kiosks</h2>
+					<p></p>
+
+					<h2>Website Refresh</h2>
+					<p></p>
+
+				</div>
+			</div>
+		</div>
+
+		<script>
+			$('#masonry').masonry({
+				columnWidth: 200,
+				itemSelector: '.item'
+			});
+		</script>
+	
+
+{% endblock %}
