@@ -1,0 +1,65 @@
+@bkmcolor: rgb(0,174,239);
+@postsGray: #242a2c;
+
+#posts {
+	header {
+		background-color: transparent;
+		a {
+			color: rgb(246,245,236) !important;
+			&:hover {
+				color: rgb(252,176,98) !important;
+			}
+		}
+	}
+	.postsHeader {
+		background-color: @postsGray;
+		padding: 2em 0;
+		margin-bottom: 5em;
+		text-align: center;
+		background-size: cover;
+		background-position: center;
+		height: 40em;
+		margin-top: -4em;
+		img {
+			width: 90%;
+			margin-top: 13em;
+		}
+	}
+	section {
+		overflow: hidden;
+		padding: 5em 0;
+		&.full-width {
+			/* background: #fff; */
+			padding: 3em;
+			margin: 2em 0;
+		}
+	}
+	h2 {
+		font-size: 2.5em;
+	}
+	h3 {
+		text-transform: uppercase;
+		font-weight: 600;
+		font-size: 1.5em;
+		margin-top: 2em;
+	}
+	ul {
+		font-size: 1.2em;
+	}
+	
+	#main {
+		min-height: 0;
+		margin: 0;
+	}
+	#main.postsStory {
+		width: 100%;
+		margin: 0 auto 10em;
+		overflow: hidden;
+		img {
+			margin-bottom: 2em;
+		}
+	}
+	.screenshots {
+		box-shadow: 5px 5px 10px #ddd;
+	}
+}
