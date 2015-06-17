@@ -1,0 +1,169 @@
+{# Brooklyn Museum study template #}
+
+{% extends "_layout" %}
+
+{% block content %}
+	
+</div>
+	<div class="bkmHeader">
+		<img src="./public/images/BKM/askbrooklynmuseum-logo.png" id="askBKMlogo">
+	</div>
+	<div class="projectsNav">
+		<a href="/brooklynmuseum" class="prev">
+			<span>➔</span> BrooklynMuseum.org
+		</a>
+		<div href="/freelance" class="next">
+			
+		</div>
+	</div>
+		
+	<div id="main" class="bkmStory">
+		<section>
+			<div class="container">
+				<div class="row">
+					<div class="col-md-10 col-offset-md-1">
+						<p>Though my official title at the Museum is 'Web Designer', I have been working on a variety of different digital products. These have all been under the umbrella of the Bloomberg Connects project funded by Bloomberg Philanthropies. The full scope of the project has been intentinally left open, but there were a handful of elements we always knew would be included: a new iOS app, a web application to work in tandem with the iOS app, new digital signage for the lobby and galleries, a CMS migration and refresh of the current website, and then a full website redesign a couple years later. The second, more involved website redesign would deeply integrate the data and content we will have gathered from the Ask program.</p>
+						<p>We started with a mission statement:</p>
+						<blockquote>To create a dynamic and responsive museum that fosters dialogue and sparks conversation between staff and all Museum visitors.</blockquote>
+						<p>What we would build has been an ongoing discussion, something to be worked out over the course of years. The one thing that will not change is our commitment to the Museum visitor.</p>
+					</div>
+				</div>
+			</div>
+		</section>
+		<section>
+			<div class="container">
+				<div class="row">
+					<div class="col-md-10 col-offset-md-1">
+						<h2>Ask Brooklyn Museum</h2>
+						<p>We branded the project Ask Brooklyn Museum. A name which hopefully conveys a sense of friendliness as well as a call to action. What we're building is, at its core, very different than what any other museum has done with tech. With our iOS app, we are giving our visitors the ability to ask questions of our staff as they wander the galleries, and we will answer them in real time. Our Audience Engagment Team will be situated in the lobby of the Museum, using a web app which allows them to reply with information about our art served up by our collections API.</p>
+					</div>
+				</div>
+			</div>
+
+			<div class="full-width screenshots">
+				<div class="row">
+					<div class="col-sm-3 col-sm-offset-1 col-xs-8 col-xs-offset-2">
+						<img src="/public/images/BKM/iphone-2.png">
+					</div>
+					<div class="col-sm-7">
+						<img src="/public/images/BKM/BKM-mac27-1.png">
+					</div>
+				</div>
+			</div>
+		</section>
+
+		<section>
+			<div class="container">
+				<div class="row">
+					<div class="col-md-10 col-offset-md-1">
+						<h2>The iOS App</h2>
+						<p>The iOS design should look familiar. We used iMessage as a mental model so that users would feel immediately comfortable using the app. We found it difficult to explain the novel purpose of Ask to our testers, but by presenting them with a recognizable design, they had no trouble sending in questions. Mimicing iMessage may have been a boring design decision, but it's intuitive for the users, and at this stage of the project, our main objective was to get people asking questions quickly and without hassle. That's been a huge success.</p>
+						<p>For release version 1, we've kept the app extremely simple. There's a landing page with a brief descriptive message, and a button which takes them into the chat view. And that's it. Future versions may allow users to view more basic visiting information, exhibition info, and event listings. In beta versions, we actually did include those features, but our visitors mistook their existance as the primary purpose of the app no matter how deeply we buried them in the navigation. The Ask concept is too new for the average visitor to grok right away. They were far too willing to assume our app wasn't any different than their conceptions of others museum apps. That being said, our visitor reviews have been overwhelmingly positive and we're excited to see how the public accepts the new direct access it provides to the Museum and it's staff.</p>
+					</div>
+				</div>
+			</div>
+
+			<div class="full-width screenshots">
+				<div class="container">
+					<div class="row">
+						<div class="col-xs-6 col-sm-5">
+							<img src="/public/images/BKM/iphone-1.png">
+						</div>
+						<div class="col-xs-6 col-sm-5">
+							<img src="/public/images/BKM/iphone-2.png">
+						</div>
+					</div>
+				</div>
+			</div>
+		</section>
+		
+		<section>
+			<div class="container">
+				<div class="row">
+					<div class="col-md-10 col-offset-md-1">
+						<h2>Ask Dashboard</h2>
+						<p>The dashboard is designed with the same UI elements as the iOS app, but it has a greatly expanded feature set. Our staff can view the list of users currently sending in questions, as well as their location, which is determined by using beacons placed throughout the building. In addition to their location, we are surfacing (in a thumbnail grid) the art nearest the visitor as their questions come in. This gives our staff quick access to those objects and the related information provided by our Collections API.</p>
+						<p>The web app is designed for internal use only, with a wide range of administrative functions, and will expand as the project expands. It's a control room for adding new accounts for our Audience Engagement Team members, currators, and other admins. It's a searchable database for all the conversations which have taken place, each of which have tons of meta data attached to them. It will be a place to view charts and graphs on things like how many questions our users have asked, how often they ask them, how long the conversations take place, etc. It's designed to grow with us.</p>
+					</div>
+				</div>
+			</div>
+
+			<div class="full-width screenshots">
+				<div class="row">
+					<div class="col-md-10 col-md-offset-1 col-lg-8 col-lg-offset-2">
+						<img src="/public/images/BKM/BKM-mac27-1.png">
+					</div>
+					<div class="col-md-10 col-md-offset-1 col-lg-8 col-lg-offset-2">
+						<img src="/public/images/BKM/BKM-mac27-2.png">
+					</div>
+					<div class="col-md-10 col-md-offset-1 col-lg-8 col-lg-offset-2">
+						<img src="/public/images/BKM/BKM-mac27-3.png">
+					</div>
+				</div>
+			</div>
+		</section>
+		
+		<section>
+			<div class="container">
+				<div class="row">
+					<div class="col-md-10 col-offset-md-1">
+						<h2>Snippet Cards</h2>
+						<p>The snippet cards are one of the most exciting pieces of the Ask app. They provide us with a very effective way of interacting with our volumous data and building something with it. The entire history of chats are stored in a database, and using our interface, we can mine those conversations for choice bits of dialogue. We create snippet cards by selecting the relevant chat bubbles from a chat and attaching further meta data such as gallery location, objects discussed, and tags. Particularly great snippets could someday be surfaced on our website or on digital gallery signage; maybe embedded in a facebook post or on Twitter. Questions our team couldn't answer themselves can be sent via snippet card to our currators — perhaps also participating artists — who can then respond to the visitors inside the card itself.</p>
+						<p>Below is a half-dozen states for the cards.</p>
+					</div>
+				</div>
+			</div>
+
+			<div class="full-width screenshots snippetcards">
+				<div class="row">
+					<div class="col-sm-10 col-sm-offset-1">
+						<img src="/public/images/BKM/snippet-cards_transparent.png">
+					</div>
+				</div>
+			</div>
+		</section>
+
+		<section>
+			<div class="container">
+				<div class="row">
+					<div class="col-md-10 col-offset-md-1">
+						<h2>Gallery Touchscreens</h2>
+						<p>These are early prototypes. Our intention is to work with an outside agency to design and develop custom touchscreens to be hung throughout the Museum. But for now, we have invested in iPads and Dell touchscreens to test out concepts that could integrate with the Ask project overall. The iPad and touchscreen are hung side by side in each gallery; the iPad for asking questions, and the touchscreen for viewing the responses.</p>
+					</div>
+				</div>
+			</div>
+
+			<div class="full-width screenshots">
+				<div class="row">
+					<div class="col-sm-4 col-md-3 col-md-offset-1">
+						<img src="/public/images/BKM/ipad-1.png">
+					</div>
+					<div class="col-sm-8 col-md-7">
+						<img src="/public/images/BKM/touchscreen-2.png">
+					</div>
+				</div>
+			</div>
+		</section>
+
+		<section>
+			<div class="container">
+				<div class="row">
+					<div class="col-md-10 col-offset-md-1">
+						<h2>Concluding Thoughts on Ask</h2>
+						<p>In the next few years, we'll be discovering and testing many different ideas for engaging with the data we collect. Our purpose is simple: to better serve our visitors while they're with us. Their questions will show us where our didactics fail at explaining the art. We'll quickly learn which works of art get the most attention — or at least attracts the most questions. We'll learn more about our repeat visitors, why they come back, and what they want out of their experience with us. The tools we've begun to build have put us on track towards becoming a museum much more connected to its community than before.</p>
+					</div>
+				</div>
+			</div>
+		</section>
+
+		<div class="projectsNav">
+			<a href="/brooklynmuseum" class="prev">
+				<span>➔</span> BrooklynMuseum.org
+			</a>
+			<div href="/freelance" class="next">
+				
+			</div>
+		</div>
+	</div>
+	
+{% endblock %}

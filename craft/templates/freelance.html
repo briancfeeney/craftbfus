@@ -1,0 +1,81 @@
+{# Freelance Work template #}
+
+{% extends "_layout" %}
+
+{% block content %}
+	
+	</div>
+	<div class="freelanceHeader">
+		<h1>Freelance Work</h1>
+	</div>
+	<div class="projectsNav">
+		<a href="/askbrooklynmuseum" class="prev">
+			<span><</span> Ask Brooklyn Museum
+		</a>
+		<div class="next">
+		</div>
+	</div>
+		
+	<div id="main" class="freelanceWork">
+		<div class="row">
+			<div class="col-sm-10 col-sm-offset-1">
+				<div class="row">
+					<div class="col-sm-8">
+						<h1>Design and Development</h1>
+					</div>
+				</div>
+				<div class="row">
+					<div class="col-sm-8">
+						<p>My freelance work is a mix of design and development. This is work I take on the side. I'm currently employed full time by the Brooklyn Museum, but I have a few hours a week to take on clients. I love making websites, and so it's not just a job to me. It's also a great way to help out good people. And to get paid a little while doing so.</p>
+						<br><br>
+					</div>
+				</div>
+
+				{% for entry in craft.entries.section('work').type('webDesign') %}
+
+				<div class="row">
+					<div class="col-sm-5 col-sm-push-7">
+						<h2>{{ entry.title }}</h2>
+						{{ entry.body }}
+						{% if entry.websiteLink %}
+							<a href="{{ entry.websiteLink }}" class="btn" style="background: #{{ entry.color }};">Visit the Site</a>
+						{% endif %}
+					</div>
+					<div class="col-sm-7 col-sm-pull-5">
+						{% if entry.portfolioImages|length %}
+							{% for image in entry.portfolioImages %}
+								<img src="{{ image.getUrl() }}" class="screenshots">
+							{% endfor %}
+						{% endif %}
+					</div>
+				</div>
+
+				{% endfor %}
+
+				<div class="row">
+					<div class="col-sm-8">
+						<h1>Print Design</h1>
+						<p>I don't do a lot of print design these days, but there have a been a few. </p>
+					</div>
+				</div>
+
+				{% for entry in craft.entries.section('work').type('printDesign') %}
+
+					<div class="row">
+						<div class="col-sm-7 col-sm-push-5">
+							<h2>{{ entry.title }}</h2>
+							{{ entry.body }}
+						</div>
+						<div class="col-sm-5 col-sm-pull-7">
+							{% for image in entry.portfolioImages.limit(1) %}
+								<img src="{{ image.getUrl() }}">
+							{% endfor %}
+						</div>
+					</div>
+
+				{% endfor %}
+		</div>
+	</div>
+	
+
+{% endblock %}

@@ -1,0 +1,391 @@
+.projectsNav {
+	overflow: hidden;
+	text-align: center;
+	background-color: @white;
+	.next, .prev {
+		min-height: 3em;
+		padding: 2em 1em;
+		min-width: 50%;
+	}
+	.next {
+		float: right;
+		text-align: right;
+	}
+	.prev {
+		float: left;
+		text-align: left;
+		span {
+			display: inline-block;
+			transform: rotate(180deg);
+			-ms-transform: rotate(180deg);
+		    -webkit-transform: rotate(180deg);
+		    position: relative;
+			top: -2px;
+		}
+	}
+	a {
+		.proximaR();
+		font-size: 1.5em;
+		display: inline-block;
+		span {
+			.proximaSB();
+			margin: 0 .5em;
+		}
+	}
+}
+
+/* -------------------------------------------------------------------------------- */
+// BROOKLYN MUSEUM
+
+@bkmcolor: rgb(0,174,239);
+
+#brooklynmuseum,
+#askbrooklynmuseum,
+#work {
+	background-color: @white;
+	header {
+		background-color: transparent;
+		a {
+			color: rgb(246,245,236) !important;
+			&:hover {
+				color: rgb(252,176,98) !important;
+			}
+		}
+	}
+	.projectsNav, 
+	.projectsNav .next {
+		a {
+			color: @bkmcolor;
+			&:hover {
+				color: darken(@bkmcolor,20%);
+			}
+			&:hover,
+			&:focus {
+				text-decoration: none;
+			}
+		}
+	}
+	.bkmHeader {
+		background-color: @bkmcolor;
+		background: url("../images/BKM/bkm-header.jpg");
+		padding: 2em 0;
+		text-align: center;
+		background-size: cover;
+		background-position: center;
+		height: 37em;
+		margin-top: -4em;
+		#BKMlogo {
+			width: 50%;
+			max-width: 27em;
+			margin-top: 5em;
+		}
+		#askBKMlogo {
+			width: 75%;
+			min-width: 75%;
+			margin-top: 10em;
+		}
+	}
+	section {
+		overflow: hidden;
+		padding: 5em 0;
+		background-color: @white;
+		&:nth-child(even) {
+			background-color: lighten(@black, 95%);
+		}
+		&:first-child {
+			padding-top: 0;
+		}
+	}
+	blockquote {
+		max-width: 1200px;
+		border: none;
+		background-color: transparent;
+		color: @bkmcolor;
+		font-size: 2.5em;
+		margin: 1.5em auto 2em;
+		padding: 0;
+		.proximaSB();
+		line-height: 1.2em;
+		@media (max-width: @screen-md) {
+			font-size: 2em;
+			padding: 0 .5em;
+		}
+		@media (max-width: @screen-sm) {
+			font-size: 1.5em;
+		}
+	}
+	ul {
+		font-size: 1.2em;
+	}
+	.full-width {
+		padding: 1em;
+		margin: 2em 0;
+		&.snippetcards {
+			background-color: rgb(39,49,54);
+			padding: 4em 0 2em;
+		}
+	}
+	.story-toggle {
+		border: none;
+		background-color: #273136;
+		color: @bkmcolor;
+		.proximaR();
+		font-size: 1.1em;
+		padding: .5em .75em;
+		text-transform: uppercase;
+	}
+	.mission-statement {
+		background: @bkmcolor;
+		blockquote {
+			color: @white;
+		}
+	}
+	#main {
+		min-height: 0;
+		margin: 0;
+	}
+	#main.bkmStory {
+		width: 100%;
+		margin: 0 auto;
+		padding-bottom: 5em;
+		overflow: hidden;
+		.intro {
+			font-style: italic;
+		}
+		h1 {
+			color: @bkmcolor;
+			font-size: 4em;
+		}
+		h2,h3 {
+			margin-bottom: .75em;
+		}
+		h2 {
+			font-size: 2.5em;
+			margin-top: 2em;
+			@media (max-width: @screen-sm) {
+				font-size: 2em;
+			}
+		}
+		h3 {
+			font-weight: 600;
+			font-size: 1.5em;
+			margin-top: 2em;
+		}
+		figure {
+			figcaption {
+				margin: .5em 0;
+				.proximaR();
+			}
+			@media (max-width: @screen-sm) {
+				max-width: 90%;
+				margin: 0 auto;
+			}
+		}
+		img {
+			margin-bottom: 2em;
+		}
+		a {
+			color: @bkmcolor;
+			&:hover {
+				color: darken(@bkmcolor,20%);
+			}
+		}
+		.ask-logo {
+			margin: 3em 0 4em;
+		}
+	}
+	.note-icon {
+		color: @bkmcolor;
+	}
+	.sidenote {
+		font-size: 1.1em;
+		.proximaR();
+	}
+	#dashboard-wireframes {
+		.item {
+			min-height: 22em;
+		}
+	}
+	.webpages {
+		position: relative;
+	}
+	.webpage {
+		border: 5px solid lighten(@black, 80%);
+		border-top: 40px solid lighten(@black, 80%);
+		box-shadow: 5px 5px 10px #999;
+		border-radius: 5px;
+		position: relative;
+		&:before {
+			content: "...";
+			font-size: 2em;
+			color: lighten(@black, 90%);
+			color: red;
+			position: absolute;
+			top: 10px;
+			left: 10px;
+			width: 100%;
+		    height: 100%;
+		}
+	}
+	.col-sm-9 {
+		position: relative;
+	}
+}
+
+#brooklynmuseum {
+	#main.bkmStory {
+		img {
+			margin: 2em 0 6em;
+		}
+	}
+}
+
+
+
+/* -------------------------------------------------------------------------------- */
+// FREELANCE WORK
+
+@postsGray: #242a2c;
+
+#freelance {
+	background: @white;
+	header {
+		background-color: transparent;
+		a {
+			color: rgb(246,245,236) !important;
+			&:hover {
+				color: rgb(252,176,98) !important;
+			}
+		}
+	}
+	.projectsNav, 
+	.projectsNav .next {
+		a {
+			color: @postsGray;
+			&:hover {
+				color: lighten(@postsGray, 20%);
+			}
+		}
+	}
+	.freelanceHeader {
+		background: url("../images/friendsworkhere.jpg");
+		padding: 2em 0;
+		text-align: center;
+		background-size: cover;
+		background-position: center;
+		height: 37em;
+		margin-top: -4em;
+		h1 {
+			color: #fff;
+			margin-top: 1.25em;
+			font-size: 10em;
+			text-transform: uppercase;
+		}
+	}
+	section {
+		overflow: hidden;
+		padding: 5em 0;
+		&.full-width {
+			/* background: #fff; */
+			padding: 3em;
+			margin: 2em 0;
+		}
+	}
+	h2 {
+		font-size: 2.5em;
+	}
+	h3 {
+		text-transform: uppercase;
+		font-weight: 600;
+		font-size: 1.5em;
+		margin-top: 2em;
+	}
+	ul {
+		font-size: 1.2em;
+	}
+	
+	#main {
+		min-height: 0;
+		margin: 0;
+	}
+	#main.freelanceWork {
+		width: 100%;
+		margin: 0 auto 10em;
+		overflow: hidden;
+		img {
+			margin-bottom: 6em;
+		}
+	}
+	.screenshots {
+		box-shadow: 5px 5px 10px #ddd;
+	}
+}
+
+
+/* -------------------------------------------------------------------------------- */
+// POSTS
+
+@postsGray: #242a2c;
+
+#posts {
+	header {
+		background-color: transparent;
+		a {
+			color: rgb(246,245,236) !important;
+			&:hover {
+				color: rgb(252,176,98) !important;
+			}
+		}
+	}
+	.postsHeader {
+		background-color: @postsGray;
+		padding: 2em 0;
+		margin-bottom: 5em;
+		text-align: center;
+		background-size: cover;
+		background-position: center;
+		height: 30em;
+		margin-top: -4em;
+		img {
+			width: 90%;
+			margin-top: 13em;
+		}
+	}
+	section {
+		overflow: hidden;
+		padding: 5em 0;
+		&.full-width {
+			/* background: #fff; */
+			padding: 3em;
+			margin: 2em 0;
+		}
+	}
+	h2 {
+		font-size: 2.5em;
+	}
+	h3 {
+		text-transform: uppercase;
+		font-weight: 600;
+		font-size: 1.5em;
+		margin-top: 2em;
+	}
+	ul {
+		font-size: 1.2em;
+	}
+	
+	#main {
+		min-height: 0;
+		margin: 0;
+	}
+	#main.postsStory {
+		width: 100%;
+		margin: 0 auto 10em;
+		overflow: hidden;
+		img {
+			margin-bottom: 6em;
+		}
+	}
+	.screenshots {
+		box-shadow: 5px 5px 10px #ddd;
+	}
+}

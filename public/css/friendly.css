@@ -3648,42 +3648,143 @@ fieldset[disabled] .navbar-inverse .btn-link:focus {
     padding: 2.5em 1.25em;
   }
 }
-#brooklynmuseum header {
+.projectsNav {
+  overflow: hidden;
+  text-align: center;
+  background-color: #ffffff;
+}
+.projectsNav .next,
+.projectsNav .prev {
+  min-height: 3em;
+  padding: 2em 1em;
+  min-width: 50%;
+}
+.projectsNav .next {
+  float: right;
+  text-align: right;
+}
+.projectsNav .prev {
+  float: left;
+  text-align: left;
+}
+.projectsNav .prev span {
+  display: inline-block;
+  transform: rotate(180deg);
+  -ms-transform: rotate(180deg);
+  -webkit-transform: rotate(180deg);
+  position: relative;
+  top: -2px;
+}
+.projectsNav a {
+  font-family: "proxima-nova";
+  font-weight: 400;
+  font-style: normal;
+  font-size: 1.5em;
+  display: inline-block;
+}
+.projectsNav a span {
+  font-family: "proxima-nova";
+  font-weight: 600;
+  font-style: normal;
+  margin: 0 .5em;
+}
+/* -------------------------------------------------------------------------------- */
+#brooklynmuseum,
+#askbrooklynmuseum,
+#work {
+  background-color: #ffffff;
+}
+#brooklynmuseum header,
+#askbrooklynmuseum header,
+#work header {
   background-color: transparent;
 }
-#brooklynmuseum header a {
+#brooklynmuseum header a,
+#askbrooklynmuseum header a,
+#work header a {
   color: #f6f5ec !important;
 }
-#brooklynmuseum header a:hover {
+#brooklynmuseum header a:hover,
+#askbrooklynmuseum header a:hover,
+#work header a:hover {
   color: #fcb062 !important;
 }
-#brooklynmuseum .bkmHeader {
+#brooklynmuseum .projectsNav a,
+#askbrooklynmuseum .projectsNav a,
+#work .projectsNav a,
+#brooklynmuseum .projectsNav .next a,
+#askbrooklynmuseum .projectsNav .next a,
+#work .projectsNav .next a {
+  color: #00aeef;
+}
+#brooklynmuseum .projectsNav a:hover,
+#askbrooklynmuseum .projectsNav a:hover,
+#work .projectsNav a:hover,
+#brooklynmuseum .projectsNav .next a:hover,
+#askbrooklynmuseum .projectsNav .next a:hover,
+#work .projectsNav .next a:hover {
+  color: #006489;
+}
+#brooklynmuseum .projectsNav a:hover,
+#askbrooklynmuseum .projectsNav a:hover,
+#work .projectsNav a:hover,
+#brooklynmuseum .projectsNav .next a:hover,
+#askbrooklynmuseum .projectsNav .next a:hover,
+#work .projectsNav .next a:hover,
+#brooklynmuseum .projectsNav a:focus,
+#askbrooklynmuseum .projectsNav a:focus,
+#work .projectsNav a:focus,
+#brooklynmuseum .projectsNav .next a:focus,
+#askbrooklynmuseum .projectsNav .next a:focus,
+#work .projectsNav .next a:focus {
+  text-decoration: none;
+}
+#brooklynmuseum .bkmHeader,
+#askbrooklynmuseum .bkmHeader,
+#work .bkmHeader {
   background-color: #00aeef;
   background: url("../images/BKM/bkm-header.jpg");
   padding: 2em 0;
-  margin-bottom: 5em;
   text-align: center;
   background-size: cover;
   background-position: center;
-  height: 40em;
+  height: 37em;
   margin-top: -4em;
 }
-#brooklynmuseum .bkmHeader img {
+#brooklynmuseum .bkmHeader #BKMlogo,
+#askbrooklynmuseum .bkmHeader #BKMlogo,
+#work .bkmHeader #BKMlogo {
   width: 50%;
-  max-width: 30em;
+  max-width: 27em;
   margin-top: 5em;
 }
-#brooklynmuseum section {
+#brooklynmuseum .bkmHeader #askBKMlogo,
+#askbrooklynmuseum .bkmHeader #askBKMlogo,
+#work .bkmHeader #askBKMlogo {
+  width: 75%;
+  min-width: 75%;
+  margin-top: 10em;
+}
+#brooklynmuseum section,
+#askbrooklynmuseum section,
+#work section {
   overflow: hidden;
   padding: 5em 0;
+  background-color: #ffffff;
 }
-#brooklynmuseum section.full-width {
-  /* background: #fff; */
-  padding: 3em;
-  margin: 2em 0;
+#brooklynmuseum section:nth-child(even),
+#askbrooklynmuseum section:nth-child(even),
+#work section:nth-child(even) {
+  background-color: #f2f2f2;
 }
-#brooklynmuseum blockquote {
-  text-align: center;
+#brooklynmuseum section:first-child,
+#askbrooklynmuseum section:first-child,
+#work section:first-child {
+  padding-top: 0;
+}
+#brooklynmuseum blockquote,
+#askbrooklynmuseum blockquote,
+#work blockquote {
   max-width: 1200px;
   border: none;
   background-color: transparent;
@@ -3697,30 +3798,40 @@ fieldset[disabled] .navbar-inverse .btn-link:focus {
   line-height: 1.2em;
 }
 @media (max-width: 992px) {
-  #brooklynmuseum blockquote {
+  #brooklynmuseum blockquote,
+  #askbrooklynmuseum blockquote,
+  #work blockquote {
     font-size: 2em;
     padding: 0 .5em;
   }
 }
 @media (max-width: 768px) {
-  #brooklynmuseum blockquote {
+  #brooklynmuseum blockquote,
+  #askbrooklynmuseum blockquote,
+  #work blockquote {
     font-size: 1.5em;
   }
 }
-#brooklynmuseum h2 {
-  font-size: 2.5em;
-}
-#brooklynmuseum h3 {
-  color: #00aeef;
-  text-transform: uppercase;
-  font-weight: 600;
-  font-size: 1.5em;
-  margin-top: 2em;
-}
-#brooklynmuseum ul {
+#brooklynmuseum ul,
+#askbrooklynmuseum ul,
+#work ul {
   font-size: 1.2em;
 }
-#brooklynmuseum .story-toggle {
+#brooklynmuseum .full-width,
+#askbrooklynmuseum .full-width,
+#work .full-width {
+  padding: 1em;
+  margin: 2em 0;
+}
+#brooklynmuseum .full-width.snippetcards,
+#askbrooklynmuseum .full-width.snippetcards,
+#work .full-width.snippetcards {
+  background-color: #273136;
+  padding: 4em 0 2em;
+}
+#brooklynmuseum .story-toggle,
+#askbrooklynmuseum .story-toggle,
+#work .story-toggle {
   border: none;
   background-color: #273136;
   color: #00aeef;
@@ -3731,114 +3842,231 @@ fieldset[disabled] .navbar-inverse .btn-link:focus {
   padding: .5em .75em;
   text-transform: uppercase;
 }
-#brooklynmuseum .mission-statement {
+#brooklynmuseum .mission-statement,
+#askbrooklynmuseum .mission-statement,
+#work .mission-statement {
   background: #00aeef;
 }
-#brooklynmuseum .mission-statement blockquote {
+#brooklynmuseum .mission-statement blockquote,
+#askbrooklynmuseum .mission-statement blockquote,
+#work .mission-statement blockquote {
   color: #ffffff;
 }
-#brooklynmuseum .jan2 {
-  background: #808080;
-}
-#brooklynmuseum #main {
+#brooklynmuseum #main,
+#askbrooklynmuseum #main,
+#work #main {
   min-height: 0;
   margin: 0;
 }
-#brooklynmuseum #main.bkmStory {
+#brooklynmuseum #main.bkmStory,
+#askbrooklynmuseum #main.bkmStory,
+#work #main.bkmStory {
   width: 100%;
-  margin: 0 auto 10em;
+  margin: 0 auto;
+  padding-bottom: 5em;
   overflow: hidden;
 }
-#brooklynmuseum #main.bkmStory h2 {
+#brooklynmuseum #main.bkmStory .intro,
+#askbrooklynmuseum #main.bkmStory .intro,
+#work #main.bkmStory .intro {
+  font-style: italic;
+}
+#brooklynmuseum #main.bkmStory h1,
+#askbrooklynmuseum #main.bkmStory h1,
+#work #main.bkmStory h1 {
   color: #00aeef;
+  font-size: 4em;
+}
+#brooklynmuseum #main.bkmStory h2,
+#askbrooklynmuseum #main.bkmStory h2,
+#work #main.bkmStory h2,
+#brooklynmuseum #main.bkmStory h3,
+#askbrooklynmuseum #main.bkmStory h3,
+#work #main.bkmStory h3 {
+  margin-bottom: .75em;
+}
+#brooklynmuseum #main.bkmStory h2,
+#askbrooklynmuseum #main.bkmStory h2,
+#work #main.bkmStory h2 {
+  font-size: 2.5em;
   margin-top: 2em;
 }
-#brooklynmuseum #main.bkmStory figure figcaption {
+@media (max-width: 768px) {
+  #brooklynmuseum #main.bkmStory h2,
+  #askbrooklynmuseum #main.bkmStory h2,
+  #work #main.bkmStory h2 {
+    font-size: 2em;
+  }
+}
+#brooklynmuseum #main.bkmStory h3,
+#askbrooklynmuseum #main.bkmStory h3,
+#work #main.bkmStory h3 {
+  font-weight: 600;
+  font-size: 1.5em;
+  margin-top: 2em;
+}
+#brooklynmuseum #main.bkmStory figure figcaption,
+#askbrooklynmuseum #main.bkmStory figure figcaption,
+#work #main.bkmStory figure figcaption {
   margin: .5em 0;
   font-family: "proxima-nova";
   font-weight: 400;
   font-style: normal;
 }
 @media (max-width: 768px) {
-  #brooklynmuseum #main.bkmStory figure {
+  #brooklynmuseum #main.bkmStory figure,
+  #askbrooklynmuseum #main.bkmStory figure,
+  #work #main.bkmStory figure {
     max-width: 90%;
     margin: 0 auto;
   }
 }
-#brooklynmuseum #main.bkmStory img {
+#brooklynmuseum #main.bkmStory img,
+#askbrooklynmuseum #main.bkmStory img,
+#work #main.bkmStory img {
   margin-bottom: 2em;
 }
-#brooklynmuseum .note-icon {
+#brooklynmuseum #main.bkmStory a,
+#askbrooklynmuseum #main.bkmStory a,
+#work #main.bkmStory a {
   color: #00aeef;
 }
-#brooklynmuseum .sidenote {
+#brooklynmuseum #main.bkmStory a:hover,
+#askbrooklynmuseum #main.bkmStory a:hover,
+#work #main.bkmStory a:hover {
+  color: #006489;
+}
+#brooklynmuseum #main.bkmStory .ask-logo,
+#askbrooklynmuseum #main.bkmStory .ask-logo,
+#work #main.bkmStory .ask-logo {
+  margin: 3em 0 4em;
+}
+#brooklynmuseum .note-icon,
+#askbrooklynmuseum .note-icon,
+#work .note-icon {
+  color: #00aeef;
+}
+#brooklynmuseum .sidenote,
+#askbrooklynmuseum .sidenote,
+#work .sidenote {
   font-size: 1.1em;
   font-family: "proxima-nova";
   font-weight: 400;
   font-style: normal;
 }
-#brooklynmuseum .bkm-color .pallete {
-  height: 0;
-  padding-bottom: 50%;
-}
-#brooklynmuseum .bkm-color .pallete:nth-child(2) {
-  background-color: #00aeef;
-}
-#brooklynmuseum .bkm-color .pallete:nth-child(3) {
-  background-color: #005b99;
-}
-#brooklynmuseum .bkm-color .pallete:nth-child(4) {
-  background-color: #716869;
-}
-#brooklynmuseum .bkm-color .pallete:nth-child(5) {
-  background-color: #9b9e71;
-}
-#brooklynmuseum .bkm-color .pallete:nth-child(6) {
-  background-color: #cef406;
-}
-#brooklynmuseum .bkm-color .pallete:nth-child(7) {
-  background-color: #c5ac0f;
-}
-#brooklynmuseum .bkm-color .pallete:nth-child(8) {
-  background-color: #f86202;
-}
-#brooklynmuseum .bkm-color .pallete:nth-child(9) {
-  background-color: #d5006d;
-}
-#brooklynmuseum .ask-color .pallete {
-  height: 0;
-  padding-bottom: 25%;
-}
-#brooklynmuseum .ask-color .pallete:nth-child(2) {
-  background-color: #00aeef;
-}
-#brooklynmuseum .ask-color .pallete:nth-child(3) {
-  background-color: #273136;
-}
-#brooklynmuseum .ask-color .pallete:nth-child(4) {
-  background-color: #131a1d;
-}
-#brooklynmuseum .ask-color .pallete:nth-child(5) {
-  background-color: #d3d5d6;
-}
-#brooklynmuseum .ask-color .pallete:nth-child(6) {
-  background-color: #a0c177;
-}
-#brooklynmuseum .ask-color .pallete:nth-child(7) {
-  background-color: #c2414a;
-}
-#brooklynmuseum .ask-color .pallete:nth-child(8) {
-  background-color: #ebd23b;
-}
-#brooklynmuseum .ask-color .pallete:nth-child(9) {
-  background-color: #ea9f46;
-}
-#brooklynmuseum #dashboard-wireframes .item {
+#brooklynmuseum #dashboard-wireframes .item,
+#askbrooklynmuseum #dashboard-wireframes .item,
+#work #dashboard-wireframes .item {
   min-height: 22em;
 }
-#brooklynmuseum .screenshots img {
-  box-shadow: 5px 5px 10px #999;
+#brooklynmuseum .webpages,
+#askbrooklynmuseum .webpages,
+#work .webpages {
+  position: relative;
 }
+#brooklynmuseum .webpage,
+#askbrooklynmuseum .webpage,
+#work .webpage {
+  border: 5px solid #cccccc;
+  border-top: 40px solid #cccccc;
+  box-shadow: 5px 5px 10px #999;
+  border-radius: 5px;
+  position: relative;
+}
+#brooklynmuseum .webpage:before,
+#askbrooklynmuseum .webpage:before,
+#work .webpage:before {
+  content: "...";
+  font-size: 2em;
+  color: #e6e6e6;
+  color: red;
+  position: absolute;
+  top: 10px;
+  left: 10px;
+  width: 100%;
+  height: 100%;
+}
+#brooklynmuseum .col-sm-9,
+#askbrooklynmuseum .col-sm-9,
+#work .col-sm-9 {
+  position: relative;
+}
+#brooklynmuseum #main.bkmStory img {
+  margin: 2em 0 6em;
+}
+/* -------------------------------------------------------------------------------- */
+#freelance {
+  background: #ffffff;
+}
+#freelance header {
+  background-color: transparent;
+}
+#freelance header a {
+  color: #f6f5ec !important;
+}
+#freelance header a:hover {
+  color: #fcb062 !important;
+}
+#freelance .projectsNav a,
+#freelance .projectsNav .next a {
+  color: #242a2c;
+}
+#freelance .projectsNav a:hover,
+#freelance .projectsNav .next a:hover {
+  color: #526064;
+}
+#freelance .freelanceHeader {
+  background: url("../images/friendsworkhere.jpg");
+  padding: 2em 0;
+  text-align: center;
+  background-size: cover;
+  background-position: center;
+  height: 37em;
+  margin-top: -4em;
+}
+#freelance .freelanceHeader h1 {
+  color: #fff;
+  margin-top: 1.25em;
+  font-size: 10em;
+  text-transform: uppercase;
+}
+#freelance section {
+  overflow: hidden;
+  padding: 5em 0;
+}
+#freelance section.full-width {
+  /* background: #fff; */
+  padding: 3em;
+  margin: 2em 0;
+}
+#freelance h2 {
+  font-size: 2.5em;
+}
+#freelance h3 {
+  text-transform: uppercase;
+  font-weight: 600;
+  font-size: 1.5em;
+  margin-top: 2em;
+}
+#freelance ul {
+  font-size: 1.2em;
+}
+#freelance #main {
+  min-height: 0;
+  margin: 0;
+}
+#freelance #main.freelanceWork {
+  width: 100%;
+  margin: 0 auto 10em;
+  overflow: hidden;
+}
+#freelance #main.freelanceWork img {
+  margin-bottom: 6em;
+}
+#freelance .screenshots {
+  box-shadow: 5px 5px 10px #ddd;
+}
+/* -------------------------------------------------------------------------------- */
 #posts header {
   background-color: transparent;
 }
@@ -3855,7 +4083,7 @@ fieldset[disabled] .navbar-inverse .btn-link:focus {
   text-align: center;
   background-size: cover;
   background-position: center;
-  height: 40em;
+  height: 30em;
   margin-top: -4em;
 }
 #posts .postsHeader img {
@@ -3893,7 +4121,7 @@ fieldset[disabled] .navbar-inverse .btn-link:focus {
   overflow: hidden;
 }
 #posts #main.postsStory img {
-  margin-bottom: 2em;
+  margin-bottom: 6em;
 }
 #posts .screenshots {
   box-shadow: 5px 5px 10px #ddd;
