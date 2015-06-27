@@ -21,12 +21,30 @@
 
 {% block content %}
 
-		<section id="aboutText">
-			<article>
-				<h2>About Me</h2>
-				{{ entry.body }}
-			</article>
-		</section>
+	<div class="row">
+		<div class="col-md-8">
+			<section id="aboutText">
+				<article>
+					<h2>About Me</h2>
+					{{ entry.body }}
+				</article>
+			</section>
+		</div>
+		<div class="col-md-4">
+			<section id="resume">
+				<ul>
+					<h3>2015</h3>
+					<li>Launched Ask Brooklyn Museum and new brooklynmuseum.org</a>
+					<li>Redeveloped Wee Beastie website</li>
+					<li>Air Master website</li>
+					<h3>2014</h3>
+					<li>Clay Fain website</li>
+					<li>Denizen website</li>
+					<li>Hired as Web Designer at Brooklyn Museum</li>
+				</ul>
+			</section>
+		</div>
+	</div>
 
 
 {% endblock %}

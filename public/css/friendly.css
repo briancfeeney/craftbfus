@@ -3823,12 +3823,6 @@ fieldset[disabled] .navbar-inverse .btn-link:focus {
   padding: 1em;
   margin: 2em 0;
 }
-#brooklynmuseum .full-width.snippetcards,
-#askbrooklynmuseum .full-width.snippetcards,
-#work .full-width.snippetcards {
-  background-color: #273136;
-  padding: 4em 0 2em;
-}
 #brooklynmuseum .story-toggle,
 #askbrooklynmuseum .story-toggle,
 #work .story-toggle {
@@ -3972,27 +3966,69 @@ fieldset[disabled] .navbar-inverse .btn-link:focus {
   box-shadow: 5px 5px 10px #999;
   border-radius: 5px;
   position: relative;
+  z-index: 1;
+  margin-bottom: 4em;
 }
 #brooklynmuseum .webpage:before,
 #askbrooklynmuseum .webpage:before,
 #work .webpage:before {
   content: "...";
-  font-size: 2em;
+  display: block;
+  font-size: 10em;
   color: #e6e6e6;
-  color: red;
   position: absolute;
-  top: 10px;
-  left: 10px;
-  width: 100%;
-  height: 100%;
+  top: -1.07em;
+  left: 0;
+  z-index: 2;
+  letter-spacing: -0.05em;
+}
+#brooklynmuseum .webpage:after,
+#askbrooklynmuseum .webpage:after,
+#work .webpage:after {
+  content: "";
+  background: #ffffff;
+  height: .055em;
+  width: 60%;
+  display: block;
+  font-size: 32em;
+  position: absolute;
+  top: -0.072em;
+  left: 0.23em;
+  z-index: 2;
+  letter-spacing: -0.05em;
+  border-radius: 4px;
+}
+@media (max-width: 768px) {
+  #brooklynmuseum .webpage,
+  #askbrooklynmuseum .webpage,
+  #work .webpage {
+    font-size: .6em;
+    border-top-width: 25px;
+  }
+  #brooklynmuseum .webpage:after,
+  #askbrooklynmuseum .webpage:after,
+  #work .webpage:after {
+    width: 50%;
+    border-radius: 2px;
+    top: -0.076em;
+  }
 }
 #brooklynmuseum .col-sm-9,
 #askbrooklynmuseum .col-sm-9,
 #work .col-sm-9 {
   position: relative;
 }
-#brooklynmuseum #main.bkmStory img {
-  margin: 2em 0 6em;
+#brooklynmuseum .snippet-cards,
+#askbrooklynmuseum .snippet-cards,
+#work .snippet-cards {
+  padding-bottom: 0;
+}
+#brooklynmuseum .snippet-cards .full-width,
+#askbrooklynmuseum .snippet-cards .full-width,
+#work .snippet-cards .full-width {
+  background-color: #273136;
+  padding: 4em 0 2em;
+  margin-bottom: 0;
 }
 /* -------------------------------------------------------------------------------- */
 #freelance {
@@ -4033,11 +4069,13 @@ fieldset[disabled] .navbar-inverse .btn-link:focus {
 #freelance section {
   overflow: hidden;
   padding: 5em 0;
+  background-color: #ffffff;
 }
-#freelance section.full-width {
-  /* background: #fff; */
-  padding: 3em;
-  margin: 2em 0;
+#freelance section:nth-child(even) {
+  background-color: #f2f2f2;
+}
+#freelance section:first-child {
+  padding-top: 0;
 }
 #freelance h2 {
   font-size: 2.5em;
@@ -4124,7 +4162,7 @@ fieldset[disabled] .navbar-inverse .btn-link:focus {
   margin-bottom: 6em;
 }
 #posts .screenshots {
-  box-shadow: 5px 5px 10px #ddd;
+  /* box-shadow: 5px 5px 10px #ddd; */
 }
 /* -------------------------------------------------------------------------------- */
 html {
@@ -4240,6 +4278,9 @@ article h2 {
   color: #5a7b8c;
   margin: 2em 0 .75em;
   font-size: 2em;
+}
+article blockquote {
+  font-size: 1.3em;
 }
 /* -------------------------------------------------------------------------------- */
 header {
@@ -4624,7 +4665,8 @@ footer p a:hover {
 #main {
   width: 1000px;
   margin: 2em auto 10em;
-  min-height: 80vh;
+  min-height: 55.5vh;
+  /* was 80vh */
   position: relative;
 }
 @media (max-width: 1050px) {
@@ -4739,7 +4781,7 @@ footer p a:hover {
   opacity: .5;
 }
 #introText {
-  margin: 3.5em auto;
+  margin: 2.5em auto 4.5em;
   padding: 1em;
   color: #f6f5ec;
   max-width: 26em;
@@ -4994,4 +5036,17 @@ footer p a:hover {
     max-width: 38em;
     margin: 0 auto 3em;
   }
+}
+/* -------------------------------------------------------------------------------- */
+#quotes #main {
+  margin-top: 3em;
+}
+#quotes #main article h5 {
+  opacity: 1;
+  color: #103e4d;
+}
+#quotes #main article a:active,
+#quotes #main article a:focus {
+  text-decoration: none;
+  color: inherit;
 }

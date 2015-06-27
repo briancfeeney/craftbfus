@@ -8,11 +8,13 @@
 
 {% block content %}
 
-<div class="main single">
-	<article>
-		{{ entry.body }}
-		<h5><a href="{{ entry.url }}">{{ entry.quoteAttribution }}</h5></a>
-	</article>
+<div class="container">
+	<div class="col-sm-8 col-sm-offset-2">
+		<article>
+			<h5>{{ entry.quoteAttribution }}</h5>
+			{{ entry.body }}
+		</article>
+	</div>
 </div>
 
 {% endblock %}

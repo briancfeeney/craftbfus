@@ -120,10 +120,6 @@
 	.full-width {
 		padding: 1em;
 		margin: 2em 0;
-		&.snippetcards {
-			background-color: rgb(39,49,54);
-			padding: 4em 0 2em;
-		}
 	}
 	.story-toggle {
 		border: none;
@@ -215,30 +211,56 @@
 		box-shadow: 5px 5px 10px #999;
 		border-radius: 5px;
 		position: relative;
+		z-index: 1;
+		margin-bottom: 4em;
 		&:before {
 			content: "...";
-			font-size: 2em;
+			display: block;
+			font-size: 10em;
 			color: lighten(@black, 90%);
-			color: red;
 			position: absolute;
-			top: 10px;
-			left: 10px;
-			width: 100%;
-		    height: 100%;
+			top: -1.07em;
+			left: 0;
+			z-index: 2;
+			letter-spacing: -.05em;
+		}
+		&:after {
+			content: "";
+			background: lighten(@black, 100%);
+			height: .055em;
+			width: 60%;
+			display: block;
+			font-size: 32em;
+			position: absolute;
+			top: -0.072em;
+			left: 0.23em;
+			z-index: 2;
+			letter-spacing: -0.05em;
+			border-radius: 4px;
+		}
+		@media (max-width: @screen-sm) {
+			font-size: .6em;
+			border-top-width: 25px;
+			&:after {
+				width: 50%;
+				border-radius: 2px;
+				top: -.076em;
+			}
 		}
 	}
 	.col-sm-9 {
 		position: relative;
 	}
-}
-
-#brooklynmuseum {
-	#main.bkmStory {
-		img {
-			margin: 2em 0 6em;
+	.snippet-cards {
+		padding-bottom: 0;
+		.full-width {
+			background-color: rgb(39,49,54);
+			padding: 4em 0 2em;
+			margin-bottom: 0;
 		}
 	}
 }
+
 
 
 
@@ -285,10 +307,12 @@
 	section {
 		overflow: hidden;
 		padding: 5em 0;
-		&.full-width {
-			/* background: #fff; */
-			padding: 3em;
-			margin: 2em 0;
+		background-color: @white;
+		&:nth-child(even) {
+			background-color: lighten(@black, 95%);
+		}
+		&:first-child {
+			padding-top: 0;
 		}
 	}
 	h2 {
@@ -386,6 +410,6 @@
 		}
 	}
 	.screenshots {
-		box-shadow: 5px 5px 10px #ddd;
+		/* box-shadow: 5px 5px 10px #ddd; */
 	}
 }

@@ -122,6 +122,9 @@ article {
 		margin: 2em 0 .75em;
 		font-size: 2em;
 	}
+	blockquote {
+		font-size: 1.3em;
+	}
 }
 
 
@@ -496,7 +499,7 @@ footer {
 #main {
 	width: 1000px;
 	margin: 2em auto 10em;
-	min-height: 80vh;
+	min-height: 55.5vh; /* was 80vh */
 	position: relative;
 	@media (max-width: 1050px) {
 		width: 95%;
@@ -616,7 +619,7 @@ footer {
 }
 
 #introText {
-	margin: 3.5em auto;
+	margin: 2.5em auto 4.5em;
 	padding: 1em;
 	color: @chalk;
 	max-width: 26em;
@@ -885,3 +888,24 @@ footer {
 	}
 }
 
+/* -------------------------------------------------------------------------------- */
+// QUOTES
+
+#quotes {
+	#main {
+		margin-top: 3em;
+		article {
+			h5 {
+				opacity: 1;
+				color: @blue;
+			}
+			a {
+				&:active,
+				&:focus {
+					text-decoration: none;
+					color: inherit;
+				}
+			}
+		}
+	}
+}

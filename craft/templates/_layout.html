@@ -49,6 +49,7 @@
 					<li id="title"><a href="{{ siteUrl }}">{{ siteName }}</a></li>
 					<li><a href="{{ url('writing') }}" {% if craft.request.firstSegment == 'writing' %}class="active"{% endif %}>Writing</a></li>
 					<li><a href="{{ url('photos') }}" {% if craft.request.firstSegment == 'photos' %}class="active"{% endif %}>Photos</a></li>
+					<li><a href="/brooklynmuseum">Work</a></li>
 					<!-- <li><a href="{{ url('reading') }}" {% if craft.request.firstSegment == 'reading' %}class="active"{% endif %}>Reading</a></li>
 					<li><a href="{{ url('work') }}" {% if craft.request.firstSegment == 'work' %}class="active"{% endif %}>Work</a></li>
 					<li><a href="{{ url('journal') }}" {% if craft.request.firstSegment == 'journal' %}class="active"{% endif %}>Journal</a></li>
@@ -117,7 +118,7 @@
 					{% endfor %}
 				{% endif %}
 
-			{% elseif craft.request.firstSegment == 'brooklynmuseum' %}
+			{% elseif craft.request.firstSegment in ['brooklynmuseum', 'askbrooklynmuseum'] %}
 
 				<div class="footerIcon"></div>
 				
@@ -128,7 +129,7 @@
 					</li>
 					<li class="fwh">
 						<img src="../public/images/friendsworkhere.png">
-						<p>I'm a member of the <a href="http://www.friendsworkhere.com/">Friends Work Here</a> co-working space on Bergen St. in Carroll Gardens, Brooklyn.</p>
+						<p>I'm a member of the <a href="http://www.friendsworkhere.com/">Friends Work Here</a> co-working space in Brooklyn.</p>
 					</li>
 				</ul>
 				<ul>
@@ -148,7 +149,7 @@
 					</li>
 					<li class="fwh">
 						<img src="../public/images/friendsworkhere.png">
-						<p>I'm a member of the <a href="http://www.friendsworkhere.com/">Friends Work Here</a> co-working space on Bergen St. in Carroll Gardens, Brooklyn.</p>
+						<p>I'm a member of the <a href="http://www.friendsworkhere.com/">Friends Work Here</a> co-working space in Brooklyn.</p>
 					</li>
 				</ul>
 				<ul>
@@ -188,12 +189,14 @@
 				</ul>
 				
 				<div class="container borderless">
+					<a href="/quotes">
 					{% for entry in craft.entries.section('quotes').limit(1).order('RAND()') %}
 				        <article class="footer-quote">
 							{{ entry.body }}
 							<h5>{{ entry.quoteAttribution }}</h5>
 						</article>
 					{% endfor %}
+					</a>
 				</div>
 			
 				

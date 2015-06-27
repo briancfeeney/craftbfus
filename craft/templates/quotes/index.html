@@ -7,25 +7,19 @@
 
 {% block content %}
 
-</div>
 
-	<div class="main">
-	
-		<article>
-			<h2>QUOTED</h2>
-		</article>
-	
-		{% paginate craft.entries.section('quotes').limit(19) as entries %}
+<div class="container">
+	<div class="col-sm-8 col-sm-offset-2">
+		{% paginate craft.entries.section('quotes').limit(2000).order('RAND()') as entries %}
 		{% for entry in entries %}
 		<article>
-			{{ entry.body }}
 			<h5><a href="{{ entry.url }}">{{ entry.quoteAttribution }}</a></h5>
+			{{ entry.body }}
 		</article>
 		{% endfor %}
-	
 	</div>
+</div>
 
-<div id="main">
 
 		<div class="quotesNav">
 		    {% if paginate.nextUrl %}
@@ -38,6 +32,5 @@
 			{% endpaginate %}
 		</div>
 
-</div>
 
 {% endblock %}
